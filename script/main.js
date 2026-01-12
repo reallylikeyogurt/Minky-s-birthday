@@ -39,12 +39,12 @@ document.addEventListener("DOMContentLoaded", function () {
     "December",
   ];
 
-  const targetDay = 7;
-  const targetMonthIndex = 11; // December
-  const targetYear = 2024;
-  const birthYear = 2001;
+  const targetDay = 19;
+  const targetMonthIndex = 0; // Januaary
+  const targetYear = 2026;
+  const birthYear = 2008;
 
-  let currentDay = 1;
+  let currentDay = 2;
   let currentMonthIndex = 0;
   let currentYear = birthYear;
   let currentAge = 0;
@@ -168,7 +168,7 @@ const animationTimeline = () => {
       {
         backgroundColor: "rgb(127, 206, 248)",
       },
-      "+=4"
+      "+=1.8"
     )
     .to(
       ".four",
@@ -250,7 +250,7 @@ const animationTimeline = () => {
     )
     .staggerFromTo(
       ".baloons img",
-      2.5,
+      1.2,
       {
         opacity: 0.9,
         y: 1400,
@@ -274,7 +274,7 @@ const animationTimeline = () => {
       "-=2"
     )
     .from(".hat", 0.5, {
-      x: -100,
+      x: -200,
       y: 350,
       rotation: -180,
       opacity: 0,
@@ -320,15 +320,15 @@ const animationTimeline = () => {
     )
     .staggerTo(
       ".eight svg",
-      1.5,
+      0.7,
       {
         visibility: "visible",
         opacity: 0,
         scale: 80,
-        repeat: 3,
-        repeatDelay: 1.4,
+        repeat: 2,
+        repeatDelay: 0.5,
       },
-      0.3
+      0.2
     )
     .to(".six", 0.5, {
       opacity: 0,
