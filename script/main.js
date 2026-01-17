@@ -2,7 +2,7 @@
 window.addEventListener("load", () => {
   Swal.fire({
     title: "Do you want to play music in the background?",
-    icon: "warning",
+    icon: "question",
     showCancelButton: true,
     confirmButtonColor: "#3085d6",
     cancelButtonColor: "#d33",
@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
     "November",
     "December",
   ];
-
+  
   const targetDay = 19;
   const targetMonthIndex = 0; // Januaary
   const targetYear = 2026;
@@ -144,7 +144,7 @@ const animationTimeline = () => {
         opacity: 0,
         y: 10,
       },
-      "+=3"
+      "+=5"
     )
     .from(".four", 0.7, {
       scale: 0.2,
