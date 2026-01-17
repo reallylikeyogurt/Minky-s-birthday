@@ -1,6 +1,22 @@
 html {
   box-sizing: border-box;
 }
+#name {
+  color: hwb(350 48% 1%);
+  display: inline-block; /* สำคัญมากสำหรับ animation */
+  animation: wiggle 1.5s ease-in-out infinite;
+}
+
+/* เอฟเฟกต์กระดิก */
+@keyframes wiggle {
+  0%   { transform: rotate(0deg); }
+  15%  { transform: rotate(-5deg); }
+  30%  { transform: rotate(5deg); }
+  45%  { transform: rotate(-5deg); }
+  60%  { transform: rotate(5deg); }
+  75%  { transform: rotate(-2deg); }
+  100% { transform: rotate(0deg); }
+}
 
 body {
   font-family: "Poppins", sans-serif;
@@ -10,6 +26,79 @@ body {
 .song {
   visibility: hidden;
 }
+
+.star-name {
+  position: relative;
+  display: inline-block;
+  font-weight: 700;
+
+  /* 💗 ชมพูอ่อนลง */
+  color: #ff9fc4;
+
+  text-shadow:
+    0 0 4px #ffd1e6,
+    0 0 8px #ffb3cf,
+    0 0 16px #ff9fc4;
+}
+
+/* ✨ ดาวหลายดวง */
+.star-name::before,
+.star-name::after {
+  content: "✦";
+  position: absolute;
+  color: #ffe6f1;
+  font-size: 0.6em;
+  opacity: 0;
+
+  /* ⭐ ถี่ขึ้น */
+  animation: twinkle 1.2s infinite ease-in-out;
+}
+
+/* ดาวซ้ายบน */
+.star-name::before {
+  top: -12px;
+  left: -18px;
+  animation-delay: 0.5s;
+}
+
+/* ดาวขวาล่าง */
+.star-name::after {
+  bottom: -10px;
+  right: -20px;
+  animation-delay: 0.5s;
+}
+
+/* ✨ เพิ่มดาวดวงที่ 3 */
+.star-name {
+  --star: "✧";
+}
+
+.star-name span {
+  display: none;
+}
+
+/* ✨ แสงดาวยิบ */
+@keyframes twinkle {
+  0% {
+    transform: scale(0.4);
+    opacity: 0;
+  }
+  30% {
+    opacity: 0.9;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  70% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(0.4);
+    opacity: 0;
+  }
+}
+
 
 .container {
   height: 100vh;
