@@ -51,7 +51,7 @@ body {
   opacity: 0;
 
   /* ⭐ กระพริบถี่ขึ้น: 0.6 วิ */
-  animation: twinkle 0.8s infinite ease-in-out;
+  animation: twinkle 1s infinite ease-in-out;
 }
 
 /* ดาวซ้ายบน */
@@ -88,21 +88,22 @@ body {
   }
 }
 
-/* ครอบทั้งหมด */
-.one {
-  text-align: center; /* กันเหนียว */
-}
-
-/* h1 ต้องกว้างเต็ม */
+/* พื้นฐาน */
 .name-wrap {
-  width: 100%;              /* ⭐ ตัวสำคัญ */
+  width: 100%;
   display: flex;
-  justify-content: center;  /* ⭐ จัดกลางจริง */
+  justify-content: center;
   align-items: center;
   gap: 10px;
+  text-align: center;
+  flex-wrap: wrap; /* ⭐ สำคัญ */
 }
 
-/* กล่อง Minkky + GIF */
+.aye {
+  white-space: nowrap;
+}
+
+/* กล่องชื่อ */
 .name-box {
   display: inline-flex;
   align-items: center;
@@ -111,8 +112,7 @@ body {
 
 /* GIF */
 .side-gif {
-  width: 40px;
-  height: auto;
+  width: 36px;
 }
 
 /* Minkky */
@@ -120,6 +120,15 @@ body {
   color: hwb(350 48% 1%);
   font-weight: 700;
 }
+
+/* 📱 มือถือ: แยกบรรทัด */
+@media (max-width: 600px) {
+  .name-box {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
 
 
 
