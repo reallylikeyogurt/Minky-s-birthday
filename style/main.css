@@ -161,6 +161,22 @@ body {
   pointer-events: none;
 }
 
+/* ครอบชื่อ Minkky! */
+.minkky-wrap {
+  position: relative;
+  display: inline-block;
+}
+
+/* GIF อยู่ตรงกลางบนคำว่า Minkky! */
+.minkky-gif {
+  position: absolute;
+  top: -28px;              /* เหนือชื่อ */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 34px;             /* ขนาดพอดี */
+  height: auto;
+  pointer-events: none;
+}
 
 
 .age-container {
