@@ -144,6 +144,25 @@ body {
   }
 }
 
+/* ครอบคำว่า Aye yo อย่างเดียว */
+.aye-wrap {
+  position: relative;
+  display: inline-block;
+}
+
+/* GIF ตรงกลางด้านบน */
+.aye-gif {
+  position: absolute;
+  top: -26px;              /* ระยะเหนือคำ */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 34px;             /* เล็ก กำลังดี */
+  height: auto;
+  pointer-events: none;
+}
+
+
+
 .age-container {
   margin-top: 10px;
   font-size: 1.8rem;
