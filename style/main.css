@@ -88,56 +88,48 @@ body {
   }
 }
 
-/* จัดกลาง */
+/* พื้นฐาน */
 .name-wrap {
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
   text-align: center;
+  flex-wrap: wrap; /* ⭐ สำคัญ */
 }
 
 .aye {
-  display: block;
+  white-space: nowrap;
 }
 
-/* ตัวอักษร Minkky (ถ้าจะกระดิก ให้กระดิกเฉพาะตัวอักษร) */
-#name {
-  display: inline-block;
-  position: relative;
-  margin-top: 10px;
-  padding: 0 22px;
+/* กล่องชื่อ */
+.name-box {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
 
+/* GIF */
+.side-gif {
+  width: 36px;
+}
+
+/* Minkky */
+#name {
   color: hwb(350 48% 1%);
   font-weight: 700;
 }
 
-/* ⭐ สำคัญ: กันไม่ให้ GIF รับ animation/transform */
-.corner-gif {
-  position: absolute;
-  width: 32px;          /* ขนาดเดียวกันทุกอุปกรณ์ */
-  height: auto;
-
-  animation: none !important;
-  transform: none !important;
-  pointer-events: none;
-}
-
-/* มุมบนซ้าย */
-.left-top {
-  top: -18px;
-  left: -18px;
-}
-
-/* มุมบนขวา */
-.right-top {
-  top: -18px;
-  right: -18px;
-}
-
-/* ❌ ไม่ลดขนาด GIF บนมือถือ */
+/* 📱 มือถือ: แยกบรรทัด */
 @media (max-width: 600px) {
-  .corner-gif {
-    width: 32px; /* เท่าคอมเป๊ะ */
+  .name-box {
+    width: 100%;
+    justify-content: center;
   }
 }
+
+
 
 
 
