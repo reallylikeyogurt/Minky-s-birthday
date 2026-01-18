@@ -156,7 +156,7 @@ body {
   top: -26px;              /* ระยะเหนือคำ */
   left: 50%;
   transform: translateX(-50%);
-  width: 34px;             /* เล็ก กำลังดี */
+  width: 56px;             /* เล็ก กำลังดี */
   height: auto;
   pointer-events: none;
 }
