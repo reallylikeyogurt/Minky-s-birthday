@@ -32,72 +32,95 @@ body {
   display: inline-block;
   font-weight: 700;
 
-  /* 💗 ชมพูอ่อนลง */
+  /* 💗 ชมพูอ่อน */
   color: #ff9fc4;
 
   text-shadow:
-    0 0 4px #ffd1e6,
-    0 0 8px #ffb3cf,
-    0 0 16px #ff9fc4;
+    0 0 4px #ffe0ee,
+    0 0 8px #ffc1da,
+    0 0 14px #ff9fc4;
 }
 
-/* ✨ ดาวหลายดวง */
+/* ✨ ดาวยิบ ๆ รอบชื่อ */
 .star-name::before,
 .star-name::after {
   content: "✦";
   position: absolute;
-  color: #ffe6f1;
+  color: #fff0f7;
   font-size: 0.6em;
   opacity: 0;
 
-  /* ⭐ ถี่ขึ้น */
-  animation: twinkle 1.2s infinite ease-in-out;
+  /* ⭐ กระพริบถี่ขึ้น: 0.6 วิ */
+  animation: twinkle 0.8s infinite ease-in-out;
 }
 
 /* ดาวซ้ายบน */
 .star-name::before {
   top: -12px;
   left: -18px;
-  animation-delay: 0.5s;
+  animation-delay: 0s;
 }
 
 /* ดาวขวาล่าง */
 .star-name::after {
   bottom: -10px;
   right: -20px;
-  animation-delay: 0.5s;
+  animation-delay: 0.5s; /* สลับจังหวะ */
 }
 
-/* ✨ เพิ่มดาวดวงที่ 3 */
-.star-name {
-  --star: "✧";
-}
-
-.star-name span {
-  display: none;
-}
-
-/* ✨ แสงดาวยิบ */
+/* ✨ เอฟเฟกต์กระพริบ */
 @keyframes twinkle {
   0% {
-    transform: scale(0.4);
+    transform: scale(0.3);
     opacity: 0;
   }
-  30% {
-    opacity: 0.9;
-  }
-  50% {
-    transform: scale(1.1);
+  40% {
+    transform: scale(1);
     opacity: 1;
   }
   70% {
+    transform: scale(1.2);
     opacity: 0.8;
   }
   100% {
-    transform: scale(0.4);
+    transform: scale(0.3);
     opacity: 0;
   }
 }
+
+/* ครอบทั้งหมด */
+.one {
+  text-align: center; /* กันเหนียว */
+}
+
+/* h1 ต้องกว้างเต็ม */
+.name-wrap {
+  width: 100%;              /* ⭐ ตัวสำคัญ */
+  display: flex;
+  justify-content: center;  /* ⭐ จัดกลางจริง */
+  align-items: center;
+  gap: 10px;
+}
+
+/* กล่อง Minkky + GIF */
+.name-box {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* GIF */
+.side-gif {
+  width: 40px;
+  height: auto;
+}
+
+/* Minkky */
+#name {
+  color: hwb(350 48% 1%);
+  font-weight: 700;
+}
+
 
 
 .container {
