@@ -88,52 +88,6 @@ body {
   }
 }
 
-/* พื้นฐาน */
-.name-wrap {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  text-align: center;
-  flex-wrap: wrap; /* ⭐ สำคัญ */
-}
-
-.aye {
-  white-space: nowrap;
-}
-
-/* กล่องชื่อ */
-.name-box {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-}
-
-/* GIF */
-.side-gif {
-  width: 36px;
-}
-
-/* Minkky */
-#name {
-  color: hwb(350 48% 1%);
-  font-weight: 700;
-}
-
-/* 📱 มือถือ: แยกบรรทัด */
-@media (max-width: 600px) {
-  .name-box {
-    width: 100%;
-    justify-content: center;
-  }
-}
-
-
-
-
-
-
 .container {
   height: 100vh;
   margin: 0 auto;
