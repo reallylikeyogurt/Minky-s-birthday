@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const targetYear = 2026;
   const birthYear = 2008;
 
-  let currentDay = 2;
+  let currentDay = 0;
   let currentMonthIndex = 0;
   let currentYear = birthYear;
   let currentAge = 0;
@@ -122,7 +122,7 @@ const animationTimeline = () => {
         opacity: 0,
         y: 10,
       },
-      "+=3.5"
+      "+=4.0"
     )
     .to(
       ".two",
@@ -156,7 +156,7 @@ const animationTimeline = () => {
     })
     .staggerTo(
       ".hbd-chatbox span",
-      1.5,
+      2.0,
       {
         visibility: "visible",
       },
@@ -325,7 +325,7 @@ const animationTimeline = () => {
         visibility: "visible",
         opacity: 0,
         scale: 80,
-        repeat: 2,
+        repeat: 1,
         repeatDelay: 0.5,
       },
       0.2
