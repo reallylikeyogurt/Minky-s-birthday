@@ -88,59 +88,57 @@ body {
   }
 }
 
-/* จัดกึ่งกลางทั้งหมด */
+/* จัดกลาง */
 .name-wrap {
   width: 100%;
   text-align: center;
 }
 
-/* Aye yo บรรทัดบน */
 .aye {
   display: block;
-  font-size: 1em;
 }
 
-/* Minkky บรรทัดล่าง */
+/* ตัวอักษร Minkky (ถ้าจะกระดิก ให้กระดิกเฉพาะตัวอักษร) */
 #name {
   display: inline-block;
-  position: relative;     /* ⭐ จุดอ้างอิงให้ GIF */
-  margin-top: 10px;       /* ⭐ ถัดลงมาอีกบรรทัด */
+  position: relative;
+  margin-top: 10px;
   padding: 0 22px;
 
   color: hwb(350 48% 1%);
   font-weight: 700;
 }
 
-/* GIF มุมบน */
+/* ⭐ สำคัญ: กันไม่ให้ GIF รับ animation/transform */
 .corner-gif {
   position: absolute;
-  width: 32px;
+  width: 32px;          /* ขนาดเดียวกันทุกอุปกรณ์ */
   height: auto;
+
+  animation: none !important;
+  transform: none !important;
+  pointer-events: none;
 }
 
-/* ซ้ายบน */
+/* มุมบนซ้าย */
 .left-top {
   top: -18px;
   left: -18px;
 }
 
-/* ขวาบน */
+/* มุมบนขวา */
 .right-top {
   top: -18px;
   right: -18px;
 }
 
-/* 📱 มือถือ */
+/* ❌ ไม่ลดขนาด GIF บนมือถือ */
 @media (max-width: 600px) {
-  #name {
-    font-size: 1.6em;
-  }
-
   .corner-gif {
-    width: 24px;
-    top: -14px;
+    width: 32px; /* เท่าคอมเป๊ะ */
   }
 }
+
 
 
 
